@@ -7,8 +7,7 @@ theme = 'anatole'
 title = 'Liz Blog'
 author = "Liz Liu"
 description = """
-Call me Liz
-MLE
+Machine Learning & Life
 """
 profilePicture = "images/avatar.jpg"
 
@@ -41,7 +40,7 @@ profilePicture = "images/avatar.jpg"
   url = "/about/"
 
 
-[[params.socialIcons]]
-icon = "fab fa-linkedin"
-title = "Linkedin"
-url = "https://www.linkedin.com/in/liz-liu-a0b149167/"
+#[[params.socialIcons]]
+##icon = "fab fa-linkedin"
+#title = "Linkedin"
+##url = "https://www.linkedin.com/in/liz-liu-a0b149167/"
