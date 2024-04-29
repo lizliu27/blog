@@ -11,7 +11,7 @@
   <title>
     Liz Liu
         |
-        Tags
+        Deep Learning Summary
       
 
     
@@ -86,10 +86,9 @@ MLE
   <link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png" />
 
-  <link rel="canonical" href="http://localhost:1313/blog/tags/" />
+  <link rel="canonical" href="http://localhost:1313/blog/deeplearning/dl_summary/" />
 
   
-  <link rel="alternate" type="application/rss+xml" href="/blog/tags/index.xml" title="" />
   
   
   
@@ -117,26 +116,96 @@ MLE
 
 
   
-  <meta name="twitter:card" content="summary"><meta name="twitter:title" content="Tags">
-<meta name="twitter:description" content="Call me Liz
-MLE
-">
+  <meta name="twitter:card" content="summary"><meta name="twitter:title" content="Deep Learning Summary">
+<meta name="twitter:description" content="Introduction to Deep Learning Projects In this series of posts, I will share insights gained from working on four distinct projects in the field of deep learning. Each project presented unique challenges and opportunities for learning, covering various aspects of neural network architecture, training pipelines, and optimization techniques.
+Project 1: Training Neural Networks for MNIST Recognition The first project focused on building a simple pipeline for training neural networks to recognize hand-written digits from the MNIST dataset.">
 
 
 
   
-  <meta property="og:url" content="http://localhost:1313/blog/tags/">
+  <meta property="og:url" content="http://localhost:1313/blog/deeplearning/dl_summary/">
   <meta property="og:site_name" content="Liz Blog">
-  <meta property="og:title" content="Tags">
-  <meta property="og:description" content="Call me Liz
-MLE">
+  <meta property="og:title" content="Deep Learning Summary">
+  <meta property="og:description" content="Introduction to Deep Learning Projects In this series of posts, I will share insights gained from working on four distinct projects in the field of deep learning. Each project presented unique challenges and opportunities for learning, covering various aspects of neural network architecture, training pipelines, and optimization techniques.
+Project 1: Training Neural Networks for MNIST Recognition The first project focused on building a simple pipeline for training neural networks to recognize hand-written digits from the MNIST dataset.">
   <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="deeplearning">
+    <meta property="article:published_time" content="2024-04-28T14:22:17+08:00">
+    <meta property="article:modified_time" content="2024-04-28T14:22:17+08:00">
 
 
 
   
   
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "deeplearning",
+        "name": "Deep Learning Summary",
+        "headline": "Deep Learning Summary",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Introduction to Deep Learning Projects In this series of posts, I will share insights gained from working on four distinct projects in the field of deep learning. Each project presented unique challenges and opportunities for learning, covering various aspects of neural network architecture, training pipelines, and optimization techniques.\nProject 1: Training Neural Networks for MNIST Recognition The first project focused on building a simple pipeline for training neural networks to recognize hand-written digits from the MNIST dataset.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/blog\/deeplearning\/dl_summary\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Liz Liu"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Liz Liu"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Liz Liu"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Liz Liu"
+        },
+        "copyrightYear" : "2024",
+        "dateCreated": "2024-04-28T14:22:17.00Z",
+        "datePublished": "2024-04-28T14:22:17.00Z",
+        "dateModified": "2024-04-28T14:22:17.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Liz Liu",
+            "url": "http://localhost:1313/blog/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "http:\/\/localhost:1313\/blog\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "http:\/\/localhost:1313\/blog\/deeplearning\/dl_summary\/",
+        "wordCount" : "201",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
 
 </head>
 <body class="body">
@@ -282,10 +351,40 @@ MLE">
 </div>
 </header>
   <div
-    class="archive 
+    class="post 
       animated fadeInDown
     "
   >
+    
+    <div class="post__content">
+      <h1>Deep Learning Summary</h1>
+      <hr>
+<h1 id="introduction-to-deep-learning-projects">Introduction to Deep Learning Projects</h1>
+<p>In this series of posts, I will share insights gained from working on four distinct projects in the field of deep learning. Each project presented unique challenges and opportunities for learning, covering various aspects of neural network architecture, training pipelines, and optimization techniques.</p>
+<h2 id="project-1-training-neural-networks-for-mnist-recognition">Project 1: Training Neural Networks for MNIST Recognition</h2>
+<p>The first project focused on building a simple pipeline for training neural networks to recognize hand-written digits from the MNIST dataset. The pipeline implementation encompassed two neural network architectures, each equipped with functionalities to load data, train, and optimize the models.</p>
+<h3 id="neural-network-architectures">Neural Network Architectures</h3>
+<p>Two distinct neural network architectures were implemented from scratch for this project:</p>
+<ol>
+<li><strong>Simple Softmax Regression</strong>: Composed of a fully-connected layer followed by a ReLU activation.</li>
+<li><strong>Two-Layer Multi-Layer Perceptron (MLP)</strong>: Composed of two fully-connected layers with a Sigmoid activation in between. Note that the MLP model utilizes biases.</li>
+</ol>
+<h3 id="activation-functions">Activation Functions</h3>
+<p>Two activation functions were used in this project:</p>
+<ol>
+<li><strong>ReLU (Rectified Linear Unit)</strong>: Used in the simple softmax regression.</li>
+<li><strong>Sigmoid</strong>: Used in the two-layer MLP.</li>
+</ol>
+<h3 id="training-processes">Training Processes</h3>
+<p>The training processes for the simple softmax regression and the two-layer MLP were implemented in this section.
+An vanilla Stochastic Gradient Descent (SGD) optimizer was implemented.</p>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
     
   </div>
 

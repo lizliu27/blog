@@ -1,4 +1,47 @@
 baseURL = 'https://lizliu27.github.io/blog/'
 languageCode = 'en-us'
-title = 'Liz Hugo Site'
-theme = 'ananke'
+
+theme = 'anatole'
+
+[params]
+title = 'Liz Blog'
+author = "Liz Liu"
+description = """
+Call me Liz
+MLE
+"""
+profilePicture = "images/avatar.jpg"
+
+
+
+[menu]
+
+  [[menu.main]]
+  name = "Home"
+  identifier = "home"
+  weight = 100
+  url = "/"
+
+  [[menu.main]]
+  name = "Deep Learning"
+  weight = 200
+  identifier = "posts"
+  url = "/deeplearning/"
+
+  [[menu.main]]
+  name = "Machine Learning for Trading"
+  weight = 200
+  identifier = "posts"
+  url = "/machinelearning/"
+
+  [[menu.main]]
+  name = "About"
+  weight = 300
+  identifier = "about"
+  url = "/about/"
+
+
+[[params.socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "https://www.linkedin.com/in/liz-liu-a0b149167/"
