@@ -1,10 +1,154 @@
-<!doctype html><html dir=ltr lang=en data-theme class="html theme--light"><head><meta charset=utf-8><title>Liz Liu
-|
-Deep Learning Summary
-</title><meta name=generator content="Hugo 0.125.4"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name=author content="Liz Liu"><meta name=description content="Machine Learning & Life
-"><link rel=stylesheet href=/blog/scss/main.min.009f917038f30ebd1f2147e8e1dfd40fc1b799422a7869aa0da12af1fd1bf8ba.css integrity="sha256-AJ+RcDjzDr0fIUfo4d/UD8G3mUIqeGmqDaEq8f0b+Lo=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/blog/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/blog/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/blog/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/blog/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/blog/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc=" crossorigin=anonymous type=text/css><link rel="shortcut icon" href=/blog/favicon.ico type=image/x-icon><link rel=apple-touch-icon sizes=180x180 href=/blog/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/blog/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/blog/favicon-16x16.png><link rel=canonical href=https://lizliu27.github.io/blog/deeplearning/dl_summary/><script type=text/javascript src=/blog/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js integrity="sha256-+RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI=" crossorigin=anonymous></script><script type=text/javascript src=/blog/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc=" crossorigin=anonymous></script><meta name=twitter:card content="summary"><meta name=twitter:title content="Deep Learning Summary"><meta name=twitter:description content="Introduction to Deep Learning Projects In this series of posts, I will share insights gained from working on four distinct projects in the field of deep learning. Each project presented unique challenges and opportunities for learning, covering various aspects of neural network architecture, training pipelines, and optimization techniques.
-Project 1: Training Neural Networks for MNIST Recognition The first project focused on building a simple pipeline for training neural networks to recognize hand-written digits from the MNIST dataset."><meta property="og:url" content="https://lizliu27.github.io/blog/deeplearning/dl_summary/"><meta property="og:site_name" content="Liz Blog"><meta property="og:title" content="Deep Learning Summary"><meta property="og:description" content="Introduction to Deep Learning Projects In this series of posts, I will share insights gained from working on four distinct projects in the field of deep learning. Each project presented unique challenges and opportunities for learning, covering various aspects of neural network architecture, training pipelines, and optimization techniques.
-Project 1: Training Neural Networks for MNIST Recognition The first project focused on building a simple pipeline for training neural networks to recognize hand-written digits from the MNIST dataset."><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="deeplearning"><meta property="article:published_time" content="2024-04-28T14:22:17+08:00"><meta property="article:modified_time" content="2024-04-28T14:22:17+08:00"><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","articleSection":"deeplearning","name":"Deep Learning Summary","headline":"Deep Learning Summary","alternativeHeadline":"","description":"
+<!doctype html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <title>
+    Liz Liu
+        |
+        Deep Learning Summary
+      
+
+    
+
+  </title>
+
+  <meta name="generator" content="Hugo 0.125.4"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Liz Liu" />
+  <meta
+    name="description"
+    content="Call me Liz
+MLE
+"
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/blog/scss/main.min.009f917038f30ebd1f2147e8e1dfd40fc1b799422a7869aa0da12af1fd1bf8ba.css"
+      integrity="sha256-AJ&#43;RcDjzDr0fIUfo4d/UD8G3mUIqeGmqDaEq8f0b&#43;Lo="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/blog/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/blog/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/blog/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/blog/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/blog/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png" />
+
+  <link rel="canonical" href="http://localhost:1313/blog/deeplearning/dl_summary/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/blog/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/blog/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary"><meta name="twitter:title" content="Deep Learning Summary">
+<meta name="twitter:description" content="Introduction to Deep Learning Projects In this series of posts, I will share insights gained from working on four distinct projects in the field of deep learning. Each project presented unique challenges and opportunities for learning, covering various aspects of neural network architecture, training pipelines, and optimization techniques.
+Project 1: Training Neural Networks for MNIST Recognition The first project focused on building a simple pipeline for training neural networks to recognize hand-written digits from the MNIST dataset.">
+
+
+
+  
+  <meta property="og:url" content="http://localhost:1313/blog/deeplearning/dl_summary/">
+  <meta property="og:site_name" content="Liz Blog">
+  <meta property="og:title" content="Deep Learning Summary">
+  <meta property="og:description" content="Introduction to Deep Learning Projects In this series of posts, I will share insights gained from working on four distinct projects in the field of deep learning. Each project presented unique challenges and opportunities for learning, covering various aspects of neural network architecture, training pipelines, and optimization techniques.
+Project 1: Training Neural Networks for MNIST Recognition The first project focused on building a simple pipeline for training neural networks to recognize hand-written digits from the MNIST dataset.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="deeplearning">
+    <meta property="article:published_time" content="2024-04-28T14:22:17+08:00">
+    <meta property="article:modified_time" content="2024-04-28T14:22:17+08:00">
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "deeplearning",
+        "name": "Deep Learning Summary",
+        "headline": "Deep Learning Summary",
+        "alternativeHeadline": "",
+        "description": "
       
         Introduction to Deep Learning Projects In this series of posts, I will share insights gained from working on four distinct projects in the field of deep learning. Each project presented unique challenges and opportunities for learning, covering various aspects of neural network architecture, training pipelines, and optimization techniques.\nProject 1: Training Neural Networks for MNIST Recognition The first project focused on building a simple pipeline for training neural networks to recognize hand-written digits from the MNIST dataset.
 
@@ -12,18 +156,376 @@ Project 1: Training Neural Networks for MNIST Recognition The first project focu
       
 
 
-    ","inLanguage":"en-us","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/lizliu27.github.io\/blog\/deeplearning\/dl_summary\/"},"author":{"@type":"Person","name":"Liz Liu"},"creator":{"@type":"Person","name":"Liz Liu"},"accountablePerson":{"@type":"Person","name":"Liz Liu"},"copyrightHolder":{"@type":"Person","name":"Liz Liu"},"copyrightYear":"2024","dateCreated":"2024-04-28T14:22:17.00Z","datePublished":"2024-04-28T14:22:17.00Z","dateModified":"2024-04-28T14:22:17.00Z","publisher":{"@type":"Organization","name":"Liz Liu","url":"https://lizliu27.github.io/blog/","logo":{"@type":"ImageObject","url":"https:\/\/lizliu27.github.io\/blog\/favicon-32x32.png","width":"32","height":"32"}},"image":[],"url":"https:\/\/lizliu27.github.io\/blog\/deeplearning\/dl_summary\/","wordCount":"1221","genre":[],"keywords":[]}</script></head><body class=body><div class=wrapper><aside class=wrapper__sidebar><div class="sidebar
-animated fadeInDown"><div class=sidebar__content><div class=sidebar__introduction><img class=sidebar__introduction-profileimage src=/blog/images/avatar.jpg alt="profile picture"><div class=sidebar__introduction-title><a href=/blog>Liz Blog</a></div><div class=sidebar__introduction-description><p>Machine Learning & Life<br></p></div></div><ul class=sidebar__list></ul></div><footer class="footer footer__sidebar"><ul class=footer__list><li class=footer__item>&copy;
-Liz Liu
-2024</li></ul></footer><script type=text/javascript src=/blog/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ=" crossorigin=anonymous></script></div></aside><main class=wrapper__main><header class=header><div class="animated fadeInDown"><a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false><span aria-hidden=true class=navbar-burger__line></span>
-<span aria-hidden=true class=navbar-burger__line></span>
-<span aria-hidden=true class=navbar-burger__line></span></a><nav class=nav><ul class=nav__list id=navMenu><li class=nav__list-item><a href=/blog/ title>Home</a></li><li class=nav__list-item><a href=/blog/machinelearning/ title>Machine Learning for Trading</a></li><li class=nav__list-item><a href=/blog/about/ title>About</a></li></ul><ul class="nav__list nav__list--end"><li class=nav__list-item><div class=themeswitch><a title="Switch Theme"><i class="fas fa-adjust fa-fw" aria-hidden=true></i></a></div></li></ul></nav></div></header><div class="post
-animated fadeInDown"><div class=post__content><h1>Deep Learning Summary</h1><hr><h1 id=introduction-to-deep-learning-projects>Introduction to Deep Learning Projects</h1><p>In this series of posts, I will share insights gained from working on four distinct projects in the field of deep learning. Each project presented unique challenges and opportunities for learning, covering various aspects of neural network architecture, training pipelines, and optimization techniques.</p><h2 id=project-1-training-neural-networks-for-mnist-recognition>Project 1: Training Neural Networks for MNIST Recognition</h2><p>The first project focused on building a simple pipeline for training neural networks to recognize hand-written digits from the MNIST dataset. The pipeline implementation encompassed two neural network architectures, each equipped with functionalities to load data, train, and optimize the models.</p><h3 id=neural-network-architectures>Neural Network Architectures</h3><p>Two distinct neural network architectures were implemented from scratch for this project:</p><ol><li><strong>Simple Softmax Regression</strong>: Composed of a fully-connected layer followed by a ReLU activation.</li><li><strong>Two-Layer Multi-Layer Perceptron (MLP)</strong>: Composed of two fully-connected layers with a Sigmoid activation in between. Note that the MLP model utilizes biases.</li></ol><h3 id=activation-functions>Activation Functions</h3><p>Two activation functions were used in this project:</p><ol><li><strong>ReLU (Rectified Linear Unit)</strong>: Used in the simple softmax regression.</li><li><strong>Sigmoid</strong>: Used in the two-layer MLP.</li></ol><h3 id=training-processes>Training Processes</h3><p>The training processes for the simple softmax regression and the two-layer MLP were implemented in this section.
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/blog\/deeplearning\/dl_summary\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Liz Liu"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Liz Liu"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Liz Liu"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Liz Liu"
+        },
+        "copyrightYear" : "2024",
+        "dateCreated": "2024-04-28T14:22:17.00Z",
+        "datePublished": "2024-04-28T14:22:17.00Z",
+        "dateModified": "2024-04-28T14:22:17.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Liz Liu",
+            "url": "http://localhost:1313/blog/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "http:\/\/localhost:1313\/blog\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "http:\/\/localhost:1313\/blog\/deeplearning\/dl_summary\/",
+        "wordCount" : "1221",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/blog/images/avatar.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/blog">Liz Blog</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Call me Liz<br />MLE<br /></p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/liz-liu-a0b149167/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Liz Liu
+        2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/blog/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/blog/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/blog/machinelearning/"
+              
+              title=""
+              >Machine Learning for Trading</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/blog/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Deep Learning Summary</h1>
+      <hr>
+<h1 id="introduction-to-deep-learning-projects">Introduction to Deep Learning Projects</h1>
+<p>In this series of posts, I will share insights gained from working on four distinct projects in the field of deep learning. Each project presented unique challenges and opportunities for learning, covering various aspects of neural network architecture, training pipelines, and optimization techniques.</p>
+<h2 id="project-1-training-neural-networks-for-mnist-recognition">Project 1: Training Neural Networks for MNIST Recognition</h2>
+<p>The first project focused on building a simple pipeline for training neural networks to recognize hand-written digits from the MNIST dataset. The pipeline implementation encompassed two neural network architectures, each equipped with functionalities to load data, train, and optimize the models.</p>
+<h3 id="neural-network-architectures">Neural Network Architectures</h3>
+<p>Two distinct neural network architectures were implemented from scratch for this project:</p>
+<ol>
+<li><strong>Simple Softmax Regression</strong>: Composed of a fully-connected layer followed by a ReLU activation.</li>
+<li><strong>Two-Layer Multi-Layer Perceptron (MLP)</strong>: Composed of two fully-connected layers with a Sigmoid activation in between. Note that the MLP model utilizes biases.</li>
+</ol>
+<h3 id="activation-functions">Activation Functions</h3>
+<p>Two activation functions were used in this project:</p>
+<ol>
+<li><strong>ReLU (Rectified Linear Unit)</strong>: Used in the simple softmax regression.</li>
+<li><strong>Sigmoid</strong>: Used in the two-layer MLP.</li>
+</ol>
+<h3 id="training-processes">Training Processes</h3>
+<p>The training processes for the simple softmax regression and the two-layer MLP were implemented in this section.
 An vanilla Stochastic Gradient Descent (SGD) optimizer was implemented.
 In my experiment, adjustments were made to optimize the training process. The number of epochs was limited, the learning rate increased, and the batch size reduced. These changes improved accuracy and minimized loss, aligning with the expectation that more epochs enhance model learning and accuracy.
-<img src=/blog/images/loss_curve.jpg alt="train result"></p><h2 id=project-2-training-convolutional-neural-network-cnn-from-scratch>Project 2: Training Convolutional Neural Network (CNN) from scratch</h2><ol><li><p><strong>Module Implementation</strong>:</p><ul><li>I learned to build a two-layer network with fully connected layers and a sigmoid activation function.</li><li>I implemented a vanilla CNN with a convolutional layer, ReLU activation, max-pooling layer, and fully connected layer for classification.</li><li>I had the opportunity to design and build my own custom CNN model, adhering to the principles of network architecture design.</li></ul><p>CNN Model Summary</p><p><strong>Model Structure:</strong></p><ul><li>Input: 32x32x3 images</li><li>Convolutional Layers: Two sets of convolutions (each with two 3x3 kernels) followed by ReLU activation and max-pooling, gradually increasing output channels (32, 64, 128, 256).</li><li>Fully Connected Layers: Two FC layers with ReLU activation.</li></ul><p><strong>Hyperparameters:</strong></p><ul><li>Batch Size: 64 (reduced for faster convergence)</li><li>Learning Rate: 0.03 (increased for faster convergence in limited epochs)</li><li>Regularization (reg): 0.0005</li><li>Epochs: 10 (limited)</li><li>Steps: [6, 8] (adjust learning rate during training)</li><li>Warmup: 0.0001 (minimal warmup)</li><li>Momentum: 0.9</li></ul><p><strong>Justification:</strong></p><ul><li>Convolutional Layers: Efficiently capture hierarchical image features.</li><li>ReLU Activation: Introduces non-linearity for better learning.</li><li>Pooling Layers: Reduce dimensionality for faster computation and reduce overfitting.</li><li>Fully Connected Layers: Enable learning of complex decision boundaries.</li></ul><p><strong>Overall:</strong></p><ul><li>Designed for efficient feature extraction from images.</li><li>Carefully chosen hyperparameters for faster convergence and prevention of overfitting within limited epochs.</li></ul><ol start=2><li><strong>Handling Unbalanced Datasets</strong>:</li></ol><ul><li>I explored the challenges posed by unbalanced datasets, where samples of each class are not evenly distributed.</li><li>I experimented with the limitations of standard training strategies on unbalanced datasets using an unbalanced version of CIFAR-10.</li><li>I implemented and evaluated a solution to the imbalance problem using Class-Balanced Focal Loss, as proposed in the CVPR-19 paper.</li></ul><ol start=3><li><strong>Hands-on Experience</strong>:</li></ol><ul><li>Through the implementation of various components of CNNs, I gained practical experience in neural network architecture design and implementation.</li><li>I learned about the importance of experimentation and testing in machine learning projects, especially when dealing with real-world datasets and challenges.</li></ul><p>Overall, this project provided me with valuable insights into CNN architecture, training strategies for handling unbalanced datasets, and the importance of implementing and evaluating novel techniques in machine learning research.</p></li></ol><h2 id=project-3-implementing-various-techniques-related-to-image-analysis-and-manipulation-using-deep-learning>Project 3: Implementing various techniques related to image analysis and manipulation using deep learning</h2><p>Specifically convolutional neural networks (CNNs) and style transfer.
-Here&rsquo;s a summary of the tasks and techniques covered:</p><h3 id=class-model-visualizations>Class Model Visualizations:</h3><ul><li>Synthesizing images to maximize classification scores for specific classes, providing insights into network focus during classification.</li><li>Generating class-specific saliency maps to understand image areas influencing classification decisions.</li><li>Creating fooling images by perturbing input images to mislead pretrained networks.</li></ul><h3 id=gradient-class-activation-mapping-gradcam>Gradient Class Activation Mapping (GradCAM):</h3><ul><li>Implementing guided backpropagation and GradCAM techniques to visualize areas of an image relevant to specific class labels.</li><li>Utilizing Captum to implement GradCAM and visualize relevant image areas.</li></ul><h3 id=adversarial-examples>Adversarial Examples:</h3><ul><li>Generating fooling images by performing gradient ascent on input images to maximize classification for specific target classes.</li></ul><h2 id=summary-of-saliency-maps-and-gradcam>Summary of Saliency Maps and GradCAM</h2><p>Saliency Maps provide visualization of image regions contributing most to the CNN&rsquo;s decision. They are determined by computing gradients with respect to input pixels, where high gradient magnitudes indicate strong impact on the model&rsquo;s output. Saliency maps are suitable for general interpretability and providing quick overviews of attention regions.</p><p>On the other hand, GradCAM (Gradient-weighted Class Activation Mapping) is designed for class-specific localization information. It highlights regions highly relevant to a specific class by combining information from multiple layers and inspecting gradients of output class scores with respect to intermediate layers. GradCAM is particularly valuable for understanding why the model made certain predictions, especially in object detection tasks. However, it requires access to model layers and is more involved to implement.</p><p>In practice, both methods have strengths and can be used in combination. Saliency maps provide quick insights into overall attention regions, while GradCAM offers detailed class-specific localization information for a deeper understanding of model decisions.</p><p><img src=/blog/images/gradcam.jpg alt=gradcam></p><h3 id=style-transfer>Style Transfer:</h3><ul><li>Implementing content loss, style loss, and total variation loss functions for style transfer using convolutional neural networks.</li><li>Stringing together loss functions and update rules to perform style transfer from a style image to a content image.</li><li>Applying style transfer to generate stylized images by combining the content of one image with the style of another.
-<img src=/blog/images/style_trans1.jpg alt=style_trans1>
-<img src=/blog/images/style_trans2.jpg alt=style_trans2></li></ul><p>The project provided hands-on experience with various techniques for interpreting and manipulating deep neural networks trained on image data. By implementing these techniques, participants gained insights into network behavior, learned methods for generating visually appealing outputs, and explored the nuances of image analysis in the context of deep learning.</p><p>Overall, Project 3 served as a comprehensive exploration of image analysis and manipulation techniques using deep learning, offering practical experience in implementing and understanding these methods.</p><h2 id=project-4-implementing-sequence-to-sequence-seq2seq-models-and-transformers-for-natural-language-processing-tasks>Project 4 Implementing sequence-to-sequence (Seq2Seq) models and transformers for natural language processing tasks.</h2><p>A summary of the tasks and techniques covered:</p><h3 id=rnn-and-lstm-implementation>RNN and LSTM Implementation</h3><ul><li>Implementing a vanilla <code>RNN</code> unit using PyTorch Linear layers and activations.</li><li>Implementing an <code>LSTM</code> unit using PyTorch nn.Parameter and activations, following a set of equations.</li></ul><h3 id=seq2seq-implementation>Seq2Seq Implementation</h3><ul><li>Implementing Seq2Seq models with an <code>encoder</code> and <code>decoder</code>.</li></ul><h3 id=seq2seq-with-attention>Seq2Seq with Attention</h3><ul><li>Implementing a simple form of attention, using cosine similarity, to evaluate its impact on model performance.</li><li>Referencing research papers for deeper understanding of attention mechanisms.</li></ul><h3 id=transformers>Transformers</h3><ul><li>Implementing a one-layer <code>transformer encoder</code>.</li><li>Tasks include embeddings, multi-head self-attention, element-wise feedforward layer, final layer, forward pass, and training.</li><li>Training the transformer encoder architecture on the dataset with default hyperparameters.</li></ul><h3 id=full-transformer-implementation>Full Transformer Implementation</h3><ul><li>Implementing a full transformer model using PyTorch built-in modules.</li><li>Training the model with hyper-parameter tuning and comparing results with other implemented models.</li></ul><p>Project 4 provides hands-on experience with building and training various neural network architectures for natural language processing tasks. Participants learn about RNNs, LSTMs, attention mechanisms, and transformers, gaining insights into their functionalities and applications in NLP. Additionally, participants gain experience in model implementation, training, and evaluation, along with hyperparameter tuning and result analysis.</p><p>Overall, Project 4 serves as a comprehensive exploration of advanced NLP techniques, equipping participants with practical skills and knowledge in deep learning for sequence modeling and language translation tasks.</p></div><div class=post__footer></div></div></main></div><footer class="footer footer__base"><ul class=footer__list><li class=footer__item>&copy;
-Liz Liu
-2024</li></ul></footer><script type=text/javascript src=/blog/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ=" crossorigin=anonymous></script></body></html>
+<img src="/blog/images/loss_curve.jpg" alt="train result"></p>
+<h2 id="project-2-training-convolutional-neural-network-cnn-from-scratch">Project 2: Training Convolutional Neural Network (CNN) from scratch</h2>
+<ol>
+<li>
+<p><strong>Module Implementation</strong>:</p>
+<ul>
+<li>I learned to build a two-layer network with fully connected layers and a sigmoid activation function.</li>
+<li>I implemented a vanilla CNN with a convolutional layer, ReLU activation, max-pooling layer, and fully connected layer for classification.</li>
+<li>I had the opportunity to design and build my own custom CNN model, adhering to the principles of network architecture design.</li>
+</ul>
+<p>CNN Model Summary</p>
+<p><strong>Model Structure:</strong></p>
+<ul>
+<li>Input: 32x32x3 images</li>
+<li>Convolutional Layers: Two sets of convolutions (each with two 3x3 kernels) followed by ReLU activation and max-pooling, gradually increasing output channels (32, 64, 128, 256).</li>
+<li>Fully Connected Layers: Two FC layers with ReLU activation.</li>
+</ul>
+<p><strong>Hyperparameters:</strong></p>
+<ul>
+<li>Batch Size: 64 (reduced for faster convergence)</li>
+<li>Learning Rate: 0.03 (increased for faster convergence in limited epochs)</li>
+<li>Regularization (reg): 0.0005</li>
+<li>Epochs: 10 (limited)</li>
+<li>Steps: [6, 8] (adjust learning rate during training)</li>
+<li>Warmup: 0.0001 (minimal warmup)</li>
+<li>Momentum: 0.9</li>
+</ul>
+<p><strong>Justification:</strong></p>
+<ul>
+<li>Convolutional Layers: Efficiently capture hierarchical image features.</li>
+<li>ReLU Activation: Introduces non-linearity for better learning.</li>
+<li>Pooling Layers: Reduce dimensionality for faster computation and reduce overfitting.</li>
+<li>Fully Connected Layers: Enable learning of complex decision boundaries.</li>
+</ul>
+<p><strong>Overall:</strong></p>
+<ul>
+<li>Designed for efficient feature extraction from images.</li>
+<li>Carefully chosen hyperparameters for faster convergence and prevention of overfitting within limited epochs.</li>
+</ul>
+<ol start="2">
+<li><strong>Handling Unbalanced Datasets</strong>:</li>
+</ol>
+<ul>
+<li>I explored the challenges posed by unbalanced datasets, where samples of each class are not evenly distributed.</li>
+<li>I experimented with the limitations of standard training strategies on unbalanced datasets using an unbalanced version of CIFAR-10.</li>
+<li>I implemented and evaluated a solution to the imbalance problem using Class-Balanced Focal Loss, as proposed in the CVPR-19 paper.</li>
+</ul>
+<ol start="3">
+<li><strong>Hands-on Experience</strong>:</li>
+</ol>
+<ul>
+<li>Through the implementation of various components of CNNs, I gained practical experience in neural network architecture design and implementation.</li>
+<li>I learned about the importance of experimentation and testing in machine learning projects, especially when dealing with real-world datasets and challenges.</li>
+</ul>
+<p>Overall, this project provided me with valuable insights into CNN architecture, training strategies for handling unbalanced datasets, and the importance of implementing and evaluating novel techniques in machine learning research.</p>
+</li>
+</ol>
+<h2 id="project-3-implementing-various-techniques-related-to-image-analysis-and-manipulation-using-deep-learning">Project 3: Implementing various techniques related to image analysis and manipulation using deep learning</h2>
+<p>Specifically convolutional neural networks (CNNs) and style transfer.
+Here&rsquo;s a summary of the tasks and techniques covered:</p>
+<h3 id="class-model-visualizations">Class Model Visualizations:</h3>
+<ul>
+<li>Synthesizing images to maximize classification scores for specific classes, providing insights into network focus during classification.</li>
+<li>Generating class-specific saliency maps to understand image areas influencing classification decisions.</li>
+<li>Creating fooling images by perturbing input images to mislead pretrained networks.</li>
+</ul>
+<h3 id="gradient-class-activation-mapping-gradcam">Gradient Class Activation Mapping (GradCAM):</h3>
+<ul>
+<li>Implementing guided backpropagation and GradCAM techniques to visualize areas of an image relevant to specific class labels.</li>
+<li>Utilizing Captum to implement GradCAM and visualize relevant image areas.</li>
+</ul>
+<h3 id="adversarial-examples">Adversarial Examples:</h3>
+<ul>
+<li>Generating fooling images by performing gradient ascent on input images to maximize classification for specific target classes.</li>
+</ul>
+<h2 id="summary-of-saliency-maps-and-gradcam">Summary of Saliency Maps and GradCAM</h2>
+<p>Saliency Maps provide visualization of image regions contributing most to the CNN&rsquo;s decision. They are determined by computing gradients with respect to input pixels, where high gradient magnitudes indicate strong impact on the model&rsquo;s output. Saliency maps are suitable for general interpretability and providing quick overviews of attention regions.</p>
+<p>On the other hand, GradCAM (Gradient-weighted Class Activation Mapping) is designed for class-specific localization information. It highlights regions highly relevant to a specific class by combining information from multiple layers and inspecting gradients of output class scores with respect to intermediate layers. GradCAM is particularly valuable for understanding why the model made certain predictions, especially in object detection tasks. However, it requires access to model layers and is more involved to implement.</p>
+<p>In practice, both methods have strengths and can be used in combination. Saliency maps provide quick insights into overall attention regions, while GradCAM offers detailed class-specific localization information for a deeper understanding of model decisions.</p>
+<p><img src="/blog/images/gradcam.jpg" alt="gradcam"></p>
+<h3 id="style-transfer">Style Transfer:</h3>
+<ul>
+<li>Implementing content loss, style loss, and total variation loss functions for style transfer using convolutional neural networks.</li>
+<li>Stringing together loss functions and update rules to perform style transfer from a style image to a content image.</li>
+<li>Applying style transfer to generate stylized images by combining the content of one image with the style of another.
+<img src="/blog/images/style_trans1.jpg" alt="style_trans1">
+<img src="/blog/images/style_trans2.jpg" alt="style_trans2"></li>
+</ul>
+<p>The project provided hands-on experience with various techniques for interpreting and manipulating deep neural networks trained on image data. By implementing these techniques, participants gained insights into network behavior, learned methods for generating visually appealing outputs, and explored the nuances of image analysis in the context of deep learning.</p>
+<p>Overall, Project 3 served as a comprehensive exploration of image analysis and manipulation techniques using deep learning, offering practical experience in implementing and understanding these methods.</p>
+<h2 id="project-4-implementing-sequence-to-sequence-seq2seq-models-and-transformers-for-natural-language-processing-tasks">Project 4 Implementing sequence-to-sequence (Seq2Seq) models and transformers for natural language processing tasks.</h2>
+<p>A summary of the tasks and techniques covered:</p>
+<h3 id="rnn-and-lstm-implementation">RNN and LSTM Implementation</h3>
+<ul>
+<li>Implementing a vanilla <code>RNN</code> unit using PyTorch Linear layers and activations.</li>
+<li>Implementing an <code>LSTM</code> unit using PyTorch nn.Parameter and activations, following a set of equations.</li>
+</ul>
+<h3 id="seq2seq-implementation">Seq2Seq Implementation</h3>
+<ul>
+<li>Implementing Seq2Seq models with an <code>encoder</code> and <code>decoder</code>.</li>
+</ul>
+<h3 id="seq2seq-with-attention">Seq2Seq with Attention</h3>
+<ul>
+<li>Implementing a simple form of attention, using cosine similarity, to evaluate its impact on model performance.</li>
+<li>Referencing research papers for deeper understanding of attention mechanisms.</li>
+</ul>
+<h3 id="transformers">Transformers</h3>
+<ul>
+<li>Implementing a one-layer <code>transformer encoder</code>.</li>
+<li>Tasks include embeddings, multi-head self-attention, element-wise feedforward layer, final layer, forward pass, and training.</li>
+<li>Training the transformer encoder architecture on the dataset with default hyperparameters.</li>
+</ul>
+<h3 id="full-transformer-implementation">Full Transformer Implementation</h3>
+<ul>
+<li>Implementing a full transformer model using PyTorch built-in modules.</li>
+<li>Training the model with hyper-parameter tuning and comparing results with other implemented models.</li>
+</ul>
+<p>Project 4 provides hands-on experience with building and training various neural network architectures for natural language processing tasks. Participants learn about RNNs, LSTMs, attention mechanisms, and transformers, gaining insights into their functionalities and applications in NLP. Additionally, participants gain experience in model implementation, training, and evaluation, along with hyperparameter tuning and result analysis.</p>
+<p>Overall, Project 4 serves as a comprehensive exploration of advanced NLP techniques, equipping participants with practical skills and knowledge in deep learning for sequence modeling and language translation tasks.</p>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Liz Liu
+        2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/blog/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></body>
+</html>
