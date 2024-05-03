@@ -29,13 +29,13 @@ profilePicture = "images/avatar.jpg"
 
   [[menu.main]]
   name = "Machine Learning for Trading"
-  weight = 200
+  weight = 300
   identifier = "posts"
   url = "/machinelearning/"
 
   [[menu.main]]
   name = "About"
-  weight = 300
+  weight = 400
   identifier = "about"
   url = "/about/"
 

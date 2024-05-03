@@ -1,6 +1,6 @@
 +++
 title = 'Traning Neural Networks'
-date = 2024-03-28T14:22:17+08:00
+date = 2023-11-28T11:22:17+08:00
 draft = false
 +++
 

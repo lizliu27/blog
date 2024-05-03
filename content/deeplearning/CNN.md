@@ -1,3 +1,12 @@
+
++++
+title = 'CNN'
+date = 2023-11-28T11:22:17+08:00
+draft = false
++++
+
+
+
 ## Project 2: Training Convolutional Neural Network (CNN) from scratch
 
 
