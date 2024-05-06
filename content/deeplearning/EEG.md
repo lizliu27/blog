@@ -5,7 +5,7 @@ date = 2023-12-22T14:22:17+08:00
 draft = false
 +++
 
-This project was led by my awesome teammate zheng cheng. We together replicated a result an exsiting paper.
+This project was led by my awesome teammate zheng cheng. We together replicated a result an exsiting paper (reference code: https://github.com/neerajwagh/eeg-gcnn).
 
 We tried to replicate the results and applied deep learning models to the auto-diagnosis of epilepsy via Electroencephalography (EEG) profiles.
 
